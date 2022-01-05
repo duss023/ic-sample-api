@@ -25,7 +25,7 @@ if len(sys.argv) < 2:
 
 if model_type == "xception":
     model = Xception(weights='imagenet')
-else
+else:
     model = ResNet50(weights='imagenet')
 
 tf.keras.models.save_model(model, 'save_model/1', save_format='tf')
