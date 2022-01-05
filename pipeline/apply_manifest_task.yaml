@@ -6,7 +6,7 @@ spec:
   workspaces:
   - name: source
   params:
-    - name: manifest_dir
+    - name: manifest-dir
       description: The directory in source that contains yaml manifests
       type: string
       default: "k8s"
@@ -17,6 +17,6 @@ spec:
       command: ["/bin/bash", "-c"]
       args:
         - |-
-          echo Applying manifests in $(inputs.params.manifest_dir) directory
-          oc apply -f $(inputs.params.manifest_dir)
+          echo Applying manifests in $(inputs.params.manifest-dir) directory
+          oc apply -f $(inputs.params.manifest-dir)
           echo -----------------------------------
