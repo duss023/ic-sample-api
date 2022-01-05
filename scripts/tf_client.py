@@ -32,7 +32,7 @@ if len(sys.argv) < 4:
     exit(-1)
 
 model_type = sys.argv[1]
-url = 'https://' + sys.argv[2] + ':8501/v1/models/ic:predict'
+url = 'http://' + sys.argv[2] + ':8501/v1/models/ic:predict'
 image_path = sys.argv[3]
 
 print('Running: %s model_type=%s url=%s image_path=%s' \
