@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: ic-sample-api
+  name: ic-sample-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ic-sample-api
+  template:
+    metadata:
+      labels:
+        app: ic-sample-api
+    spec:
+      containers:
+      - name: ic-sample-api
+        image: tensorflow/serving
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8501
+          protocol: TCP
+        volumeMounts:
+        - mountPath: "/models"
+          name: modelpd
+        env:
+        - name: MODEL_NAME
+          value: "ic"
+      volumes:
+      - name: modelpd
+        persistentVolumeClaim:
+          claimName: model-pv-claim

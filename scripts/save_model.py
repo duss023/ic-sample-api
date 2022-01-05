@@ -31,4 +31,4 @@ if model_type == "xception":
 else:
     model = ResNet50(weights='imagenet')
 
-tf.keras.models.save_model(model, 'save_model/1', save_format='tf')
+tf.keras.models.save_model(model, 'ic/1', save_format='tf')
