@@ -2,6 +2,10 @@
 
 Image Classifcation API Example using ImageNet pretrained ResNet50/Xception model and tensorflow serving 
 
+## Architecture
+
+![Architecture](doc/images/architecture_ui_and_api.png)
+
 ## Prerequisites
 
 * OpenShift 4
