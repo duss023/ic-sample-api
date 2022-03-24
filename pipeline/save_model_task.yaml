@@ -12,7 +12,7 @@ spec:
       default: "resnet50"
   steps:
     - name: save
-      image: tensorflow/tensorflow
+      image: ibmcom/tensorflow-ppc64le
       workingDir: '$(workspaces.output.path)'
       command:
         - python3
