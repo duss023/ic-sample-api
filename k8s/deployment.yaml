@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: ic-sample-api
-        image: tensorflow/serving
+        image: ibmcom/tensorflow-serving-ppc64le
         imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 8501
