@@ -41,7 +41,7 @@ $ tkn pipeline list
 ```
 Run pipeline
 ```bash
-$ tkn pipeline start model-save-and-deploy -w name=shared-workspace,claimName=model-pv-claim -p deployment-name=ic-sample-api -p git-url=https://github.com/mmitsugi/ic-sample-api.git --use-param-defaults
+$ tkn pipeline start model-save-and-deploy -w name=shared-workspace,claimName=model-pv-claim -p deployment-name=ic-sample-api -p git-url=https://github.com/mmitsugi/ic-sample-api.git -p git-revision=ppc64le --use-param-defaults
 ```
 
 ## References
